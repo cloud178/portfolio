@@ -10,7 +10,7 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <SectionTitle>My Skills</SectionTitle>
-            <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+            <FlexWrapper wrap={"wrap"} justify={"center"}>
                 <Skill iconId={"htmlSvg"} title={"html5"}
                        description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
                 <Skill iconId={"cssSvg"} title={"css"}
@@ -22,6 +22,10 @@ export const Skills = () => {
                 <Skill iconId={"gitSvg"} title={"git"}
                        description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
                 <Skill iconId={"githubSvg"} title={"github"}
+                       description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
+            <Skill iconId={"typeScriptSvg"} title={"typescript"} viewBox={"0 0  35 35"}
+                       description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
+            <Skill iconId={"styledComponentsSvg"} title={"styled components"} viewBox={"0 0  35 35"}
                        description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
             </FlexWrapper>
         </StyledSkills>
