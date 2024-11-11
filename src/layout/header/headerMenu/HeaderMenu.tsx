@@ -48,8 +48,7 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow: hidden;
-    //outline: 1px solid red;
-    color: ${theme.colors.font.fontHeader};
+    color: ${theme.colors.font.fontSecondary};
     
     & + & {
         top: 50%;
@@ -67,7 +66,7 @@ const ListItem = styled.li`
         content: "";
         display: inline-block;
         height: 2px;
-        background-color: ${theme.colors.font.fontHeader};
+        background-color: ${theme.colors.font.fontSecondary};
         
         position: absolute;
         top: 50%;
@@ -93,7 +92,5 @@ const ListItem = styled.li`
                 transform: skewX(-15deg) translateX(-5px);
             }
         }
-
-        
     }
 `
