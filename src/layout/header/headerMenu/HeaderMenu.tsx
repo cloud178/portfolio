@@ -80,6 +80,10 @@ const ListItem = styled.li`
     &:hover {
         transform: scale(1.2);
         
+        &:active {
+            transform: scale(1.2) translateY(2px);
+        }
+        
         &::before {
             transform: scale(1);
         }
