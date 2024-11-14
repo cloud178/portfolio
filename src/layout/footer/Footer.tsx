@@ -17,7 +17,7 @@ export const Footer = () => {
                     </SocialItem>
                     <SocialItem>
                         <SocialLink>
-                            <Icon iconId={"githubSvg2"} width={"20"} height={"20"} viewBox={"0 0 22 22"}/>
+                            <Icon iconId={"githubSvg4"} width={"20"} height={"20"} viewBox={"0 0 22 22"}/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>

@@ -14,7 +14,7 @@ export const SectionTitle = styled.h2`
         content: "";
         display: inline-block;
         background-color: ${theme.colors.font.fontSecondary};
-        height: 6px;
+        height: 3px;
         width: 55px;
 
         position: absolute;
