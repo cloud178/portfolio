@@ -34,11 +34,14 @@ const StyledSkill = styled.div`
 `
 
 const IconContainer = styled.div`
+    filter: grayscale(1);
+
     transition: transform 0.3s ease;
     transform-origin: center;
 
     &:hover {
         transform: scale(1.2);
+        filter: grayscale(0);
     }
 `
 
