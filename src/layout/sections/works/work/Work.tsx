@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { theme } from '../../../../styles/Theme';
 
 type WorkPropsType = {
     src: string;
@@ -20,8 +21,8 @@ export const Work = (props: WorkPropsType) => {
 };
 
 const StyledWork = styled.div`
-    background-color: #fff4c3;
-    max-width: 400px;
+    background-color: ${theme.colors.primaryBg};
+    max-width: 500px;
     width: 100%;
 `
 

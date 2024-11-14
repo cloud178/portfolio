@@ -1,7 +1,7 @@
-import {createGlobalStyle} from "styled-components";
-import {theme} from "./Theme";
+import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
-export const GlobalStyle = createGlobalStyle `
+export const GlobalStyle = createGlobalStyle`
     *,
     *::before,
     *::after {
@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle `
     
     a {
         text-decoration: none;
+        color: ${theme.colors.font.fontPrimary}
     }    
     
     ul {
@@ -45,4 +46,16 @@ export const GlobalStyle = createGlobalStyle `
     section:nth-of-type(odd) {
         background-color: ${theme.colors.secondaryBg};
     }
-`
+
+    h3 {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 14px;
+    }
+`;
