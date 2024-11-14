@@ -5,9 +5,9 @@ import {theme} from "../../../styles/Theme";
 export const HeaderMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledHeaderMenu>
-            <ul>
+            <ul  role="menu">
                 {props.menuItems.map((item, index) => {
-                    return <ListItem key={index}>
+                    return <ListItem key={index} role="menuitem">
                         <Link href="#">
                             {item}
                             <Mask>
