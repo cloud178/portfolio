@@ -37,6 +37,12 @@ const StyledWork = styled.div`
 
         & + ${Link} {
             padding-left: 20px;
+            
+            &:hover {
+                &::after {
+                    width: calc(100% - 20px);
+                    left: 20px;
+            }
         }
     }
 

@@ -20,10 +20,11 @@ export const GlobalStyle = createGlobalStyle`
         color: ${theme.colors.font.fontPrimary};
         line-height: 1.2;
     }
-    
+        
     a {
         text-decoration: none;
-        color: ${theme.colors.font.fontPrimary}
+        color: ${theme.colors.font.fontPrimary};
+        cursor: pointer;
     }    
     
     ul {

@@ -6,6 +6,10 @@ export const theme = {
         font: {
             fontPrimary: '#FFFFFF',
             fontSecondary: '#2DCB87',
-        }
+        },
+
+        borderColor: '#4A4A4A',
+
+        placeholderColor: '#495057',
     }
 }

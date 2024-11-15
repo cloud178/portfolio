@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import webTemplate from "../../../assets/images/blog-web-template.webp"
 import { FlexWrapper } from '../FlexWrapper';
+import {theme} from "../../../styles/Theme";
+import {Link} from "../Link";
 
 export const Slider = () => {
     return (
@@ -16,7 +18,7 @@ export const Slider = () => {
             </FlexWrapper>
             <Pagination>
                 <span> </span>
-                <span> </span>
+                <span className={"active"}> </span>
                 <span> </span>   
             </Pagination>
         </StyledSlider>
@@ -24,19 +26,28 @@ export const Slider = () => {
 };
 
 const StyledSlider = styled.div`
-    // display: flex;
-    // justify-content: center;
-    border: 1px solid red;
     max-width: 400px;
     display: flex;
     flex-direction: column; 
     align-items: center;
+    gap: 10px;
 `
 
 const Slide = styled.div`
-    background-color: #ecceb8;
-    width: 100%;
+    background-color: ${theme.colors.secondaryBg};
     text-align: center;
+    height: 430px;
+    
+    ${Link} {
+        padding-left: 0;
+        padding-right: 0;
+
+        &:hover {
+            &::after {
+                width: 100%;
+                left: 0px;
+            }
+    }
 `
 
 const Image = styled.img`
@@ -45,19 +56,30 @@ const Image = styled.img`
      object-fit: cover;
 `
 
-const Text = styled.p``
+const Title = styled.h3`
+    margin-top: 25px;
+    margin-bottom: 8px;
+`
 
-const Title = styled.h3``
-
-const Link = styled.a``
+const Text = styled.p`
+    margin-bottom: 10px;
+`
 
 const Pagination = styled.div`
-    // background-color: #ecceb8;
     span {
         display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin: 5px;
-        background-color: deeppink;
+        width: 7px;
+        height: 7px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        
+        & + span {
+            margin-left: 5px;
+        }
+        
+        &.active {
+            background-color: ${theme.colors.font.fontSecondary};
+            width: 20px;
+        }
     }
 `
