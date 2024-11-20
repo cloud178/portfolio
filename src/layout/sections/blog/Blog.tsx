@@ -7,7 +7,7 @@ import {Slider} from "../../components/slider/Slider";
 
 export const Blog = () => {
     return (
-        <StyledBlog>
+        <StyledBlog id='Blog'>
             <SectionTitle>Blog</SectionTitle>
             <FlexWrapper justify={"center"} align={"center"} direction={"column"}>
                 <StyledICon iconId={"blogSvg"} width={"60"} height={"60"} viewBox={"0 0 32 32"}/>

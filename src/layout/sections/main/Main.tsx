@@ -7,7 +7,7 @@ import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
     return (
-        <StyledMain>
+        <StyledMain id='Home'>
             <Container>
                 <FlexWrapper justify="space-between" align={"center"}>
                     <FlexWrapper direction={"column"} justify={"center"} width={"50%"}>
@@ -75,7 +75,6 @@ const PhotoWrapper = styled.div`
         z-index: -100;
 
     }
-}
 `
 
 const Name = styled.h2`
