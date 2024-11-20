@@ -2,12 +2,16 @@ import styled from "styled-components";
 
 
 type FlexWrapperPropsType = {
-    direction?: string;
+    direction?: "row" | "row-reverse" | "column" | "column-reverse";
     justify?: string;
     align?: string;
-    wrap?: string;
+    wrap?: "nowrap" | "wrap" | "wrap-reverse";
     width?: string;
     gap?: string;
+    flex?: string;
+    alignContent?: string;
+    flexGrow?: number;
+    flexBasis?: string;
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -17,6 +21,10 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     align-items: ${props => props.align || 'stretch'};
     flex-wrap: ${props => props.wrap || 'nowrap'};
     width: ${props => props.width || "auto"};
-    height: 100%;
+    //height: 100%;
     gap: ${props => props.gap || "0px"};
+    flex: ${props => props.flex || undefined};
+    align-content: ${props => props.alignContent || undefined};
+    flex-grow: ${props => props.flexGrow || undefined};
+    flex-basis: ${props => props.flexBasis || undefined};
 `
