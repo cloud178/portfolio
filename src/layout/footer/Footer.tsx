@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../components/icon/Icon";
 import {FlexWrapper} from "../components/FlexWrapper";
@@ -11,17 +10,17 @@ export const Footer = () => {
                 <Text>My social media links</Text>
                 <SocialList>
                     <SocialItem>
-                        <SocialLink>
+                        <SocialLink href="https://www.linkedin.com/in/denis-birukou-6845a9245/">
                             <Icon iconId={"linkedinSvg2"} width={"20"} height={"20"} viewBox={"0 0 24 24"}/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>
-                        <SocialLink>
+                        <SocialLink href="https://github.com/cloud178">
                             <Icon iconId={"githubSvg4"} width={"20"} height={"20"} viewBox={"1 1 22 22"}/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>
-                        <SocialLink>
+                        <SocialLink href="https://t.me/Biryuko_ov">
                             <Icon iconId={"telegramSvg"} width={"20"} height={"20"} viewBox={"1 1 23 23"}/>
                         </SocialLink>
                     </SocialItem>
