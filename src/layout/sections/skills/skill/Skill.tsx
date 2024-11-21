@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from "../../../components/icon/Icon";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {theme} from "../../../../styles/Theme";
 
 
 type SkillPropsType = {
@@ -29,19 +30,27 @@ export const Skill = (props: SkillPropsType) => {
 
 
 const StyledSkill = styled.div`
-    width: 380px;
+    width: 360px;
     padding: 62px 20px 40px;
+    flex-grow: 1;
+    
+    @media ${theme.media.mobile} {
+        padding: 62px 0 40px;
+    }
 `
 
 const IconContainer = styled.div`
-    filter: grayscale(1);
 
-    transition: transform 0.3s ease;
-    transform-origin: center;
+    @media (pointer: fine) {
+        filter: grayscale(1);
 
-    &:hover {
-        transform: scale(1.2);
-        filter: grayscale(0);
+        transition: transform 0.3s ease;
+        transform-origin: center;
+
+        &:hover {
+            transform: scale(1.2);
+            filter: grayscale(0);
+        }
     }
 `
 
