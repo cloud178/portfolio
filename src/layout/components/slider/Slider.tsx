@@ -36,7 +36,7 @@ const StyledSlider = styled.div`
 const Slide = styled.div`
     background-color: ${theme.colors.secondaryBg};
     text-align: center;
-    height: 430px;
+    min-height: 430px;
     
     ${Link} {
         padding-left: 0;
@@ -48,12 +48,14 @@ const Slide = styled.div`
                 left: 0px;
             }
     }
+}
 `
 
 const Image = styled.img`
     width: 100%;
-     height: 275px;
-     object-fit: cover;
+    max-width: 400px;
+    height: 275px;
+    object-fit: cover;
 `
 
 const Title = styled.h3`
