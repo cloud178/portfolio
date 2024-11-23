@@ -14,10 +14,8 @@ export const Main = () => {
                                    gap={"100px"}
                 >
                     <FlexWrapper direction={"column"} justify={"center"}
-                                 // flex={"1 1 50%"}
-                        // width={"50%"}
-                        flexGrow={1}
-                        flexBasis={"50%"}
+                                 flexGrow={1}
+                                 flexBasis={"50%"}
 
                     >
                         <SmallText>Hi There,</SmallText>
@@ -52,7 +50,7 @@ const Photo = styled.img`
     width: 300px;
     height: 400px;
     object-fit: cover;
-    
+
     @media ${theme.media.mobile} {
         width: 250px;
         height: 300px;
@@ -60,10 +58,10 @@ const Photo = styled.img`
 `
 
 const PhotoWrapper = styled.div`
-    position: relative;  
-    
+    position: relative;
+
     z-index: 0;
-    
+
     &::before {
         position: absolute;
 
@@ -82,7 +80,7 @@ const PhotoWrapper = styled.div`
             bottom: -6px;
         }
     }
-    
+
     &::after {
         position: absolute;
 
@@ -125,7 +123,7 @@ const Name = styled.h2`
             z-index: -100;
         }
     }
-    
+
     @media ${theme.media.mobile} {
         margin: 15px 0 22px;
     }
@@ -148,14 +146,9 @@ const SmallText = styled.h2`
 const StyledFlexWrapper = styled(FlexWrapper)`
     @media ${theme.media.mobile} {
         gap: 65px;
-
     }
-    
+
     @media screen and (max-width: 846px) {
         justify-content: center;
     }
 `
-
-// const TextFlexWrapper = styled(FlexWrapper)`
-//     align-items: center;
-// `

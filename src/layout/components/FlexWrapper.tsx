@@ -21,7 +21,6 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     align-items: ${props => props.align || 'stretch'};
     flex-wrap: ${props => props.wrap || 'nowrap'};
     width: ${props => props.width || "auto"};
-    //height: 100%;
     gap: ${props => props.gap || "0px"};
     flex: ${props => props.flex || undefined};
     align-content: ${props => props.alignContent || undefined};

@@ -5,7 +5,6 @@ import {FlexWrapper} from "../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 import {MobileMenu} from "./mobileMenu/MobileMenu";
 
-
 const menuItems = ['Home', 'Tech Stack', 'Projects', 'Blog', 'Contacts']
 
 export const Header = () => {

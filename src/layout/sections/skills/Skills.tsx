@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { FlexWrapper } from "../../components/FlexWrapper";
-import { SectionTitle } from "../../components/SectionTitle";
-import { Skill } from "./skill/Skill";
-import { Container } from "../../components/Container";
+import {FlexWrapper} from "../../components/FlexWrapper";
+import {SectionTitle} from "../../components/SectionTitle";
+import {Skill} from "./skill/Skill";
+import {Container} from "../../components/Container";
 
 export const Skills = () => {
     return (
-        <StyledSkills  id='Tech Stack'>
+        <StyledSkills id='Tech Stack'>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
