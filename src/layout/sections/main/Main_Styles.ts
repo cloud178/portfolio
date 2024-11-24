@@ -4,6 +4,7 @@ import {font} from "../../../styles/Common";
 import {FlexWrapper} from "../../components/FlexWrapper";
 
 const Main = styled.section`
+    padding-top: 100px;
     min-height: 100vh;
     display: flex;
     align-items: center;
