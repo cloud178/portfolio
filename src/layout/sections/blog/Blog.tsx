@@ -36,7 +36,9 @@ export const Blog = () => {
 const StyledBlog = styled.section``;
 
 const StyledICon = styled(Icon)`
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 `;
 
-const Text = styled.p``;
+const Text = styled.p`
+    margin-bottom: 20px;
+`;
