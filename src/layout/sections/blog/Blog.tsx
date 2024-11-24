@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../components/SectionTitle";
 import { Icon } from "../../components/icon/Icon";
@@ -5,7 +6,7 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { Slider } from "../../components/slider/Slider";
 import { Container } from "../../components/Container";
 
-export const Blog = () => {
+export const Blog: React.FC = () => {
     return (
         <StyledBlog id="Blog">
             <Container>
@@ -33,7 +34,9 @@ export const Blog = () => {
     );
 };
 
-const StyledBlog = styled.section``;
+const StyledBlog = styled.section`
+
+`;
 
 const StyledICon = styled(Icon)`
     margin-bottom: 30px;
