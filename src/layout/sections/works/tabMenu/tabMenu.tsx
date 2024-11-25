@@ -3,8 +3,8 @@ import styled from "styled-components";
 import {Link} from "../../../components/Link";
 
 type TabMenuPropsType = {
-    tabsItems: Array<{ title: string, status: "all" | "landing" | "React" | "spa" }>,
-    changeFilterStatus: (value: "all" | "landing" | "React" | "spa") => void,
+    tabsItems: Array<{ title: string, status: "all" | "landing" | "react" | "spa" }>,
+    changeFilterStatus: (value: "all" | "landing" | "react" | "spa") => void,
 }
 
 export const TabMenu = (props: TabMenuPropsType) => {
@@ -13,7 +13,7 @@ export const TabMenu = (props: TabMenuPropsType) => {
             <ul  role="menu">
                 {props.tabsItems.map((item, index) => {
                     return <ListItem key={index} role="menuitem">
-                        <Link href="#">{item.title}</Link>
+                        <Link as={"button"} onClick={() => {props.changeFilterStatus(item.status)}}>{item.title}</Link>
                     </ListItem>
                 })}
             </ul>

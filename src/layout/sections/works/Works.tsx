@@ -10,7 +10,7 @@ import {S} from "./Works_Styles";
 
 // const tabsItems = ["All", "Landing Page", "React", "SPA"];
 
-const tabsItems: Array<{ title: string, status: "all" | "landing" | "React" | "spa" }> = [
+const tabsItems: Array<{ title: string, status: "all" | "landing" | "react" | "spa" }> = [
     {
         title: "All",
         status: "all",
@@ -21,7 +21,7 @@ const tabsItems: Array<{ title: string, status: "all" | "landing" | "React" | "s
     },
     {
         title: "React",
-        status: "React",
+        status: "react",
     },
     {
         title: "SPA",
@@ -40,25 +40,25 @@ const worksData = [
         src: TimerImg,
         title: "Timer",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        type: "React",
+        type: "react",
     },
 ];
 
 export const Works: React.FC = () => {
-    const [currentFilterStatus, setCurrentFilterStatus] = useState("all")
-    let filteredWorks = worksData
+    const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
+    let filteredWorks = worksData;
 
     if (currentFilterStatus === "landing") {
         filteredWorks = worksData.filter(work => work.type === "landing");
     }
-    if (currentFilterStatus === "React") {
-        filteredWorks = worksData.filter(work => work.type === "React");
+    if (currentFilterStatus === "react") {
+        filteredWorks = worksData.filter(work => work.type === "react");
     }
     if (currentFilterStatus === "spa") {
         filteredWorks = worksData.filter(work => work.type === "spa");
     }
 
-    function changeFilterStatus(value: "all" | "landing" | "React" | "spa") {
+    function changeFilterStatus(value: "all" | "landing" | "react" | "spa") {
         setCurrentFilterStatus(value)
     }
 
