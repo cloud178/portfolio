@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {SectionTitle} from "../../components/SectionTitle";
-import {TabMenu} from "./tabMenu/tabMenu";
+import {TabMenu, TabsStatusType} from "./tabMenu/tabMenu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import SocialNetworkImg from "../../../assets/images/proj1 (1).webp";
@@ -8,9 +8,7 @@ import TimerImg from "../../../assets/images/proj2 (1).webp";
 import {Container} from "../../components/Container";
 import {S} from "./Works_Styles";
 
-// const tabsItems = ["All", "Landing Page", "React", "SPA"];
-
-const tabsItems: Array<{ title: string, status: "all" | "landing" | "react" | "spa" }> = [
+    const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
     {
         title: "All",
         status: "all",
@@ -58,7 +56,7 @@ export const Works: React.FC = () => {
         filteredWorks = worksData.filter(work => work.type === "spa");
     }
 
-    function changeFilterStatus(value: "all" | "landing" | "react" | "spa") {
+    function changeFilterStatus(value: TabsStatusType) {
         setCurrentFilterStatus(value)
     }
 
@@ -66,7 +64,9 @@ export const Works: React.FC = () => {
         <S.Works id='Projects'>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
-                <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}/>
+                <TabMenu tabsItems={tabsItems}
+                         changeFilterStatus={changeFilterStatus}
+                         currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
 
                     {filteredWorks.map((w, index) => {
