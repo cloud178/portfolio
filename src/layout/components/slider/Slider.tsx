@@ -5,6 +5,7 @@ import { S } from "./Slider_Styles";
 import { Link } from "../Link";
 import webTemplate from "../../../assets/images/blog-web-template.webp";
 import "../../../styles/slider.css"
+import { Icon } from "../icon/Icon";
 
 type SlidePropsType = {
     title: string;
@@ -51,7 +52,13 @@ const items = [
 
 export const Slider = () => (
     <S.Slider>
-        <AliceCarousel mouseTracking items={items} />
+        <AliceCarousel 
+        mouseTracking
+        // disableButtonsControls
+        renderPrevButton={()=>{
+            return <Icon iconId={"reactSvg"} width="20px" height="20px"/>
+        }}
+        items={items} />
     </S.Slider>
 );
 

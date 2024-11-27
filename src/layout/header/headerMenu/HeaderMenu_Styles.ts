@@ -1,12 +1,10 @@
-import styled, {css} from "styled-components";
-import {theme} from "../../../styles/Theme";
+import styled, { css } from "styled-components";
+import { theme } from "../../../styles/Theme";
 
 // Menu
 
 const Link = styled.a`
-    font-family:
-        Josefin Sans,
-        sans-serif;
+    font-family: Josefin Sans, sans-serif;
     font-size: 25px;
     font-weight: 400;
     text-align: center;
@@ -74,8 +72,7 @@ const MenuItem = styled.li`
 
 // Mobile Menu
 
-const MobileMenu = styled.nav`
-`;
+const MobileMenu = styled.nav``;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
@@ -96,8 +93,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         bottom: 50px;
 
         ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
+            props.isOpen &&
+            css<{ isOpen: boolean }>`
                 background-color: rgba(255, 255, 255, 0);
             `}
         &::before {
@@ -110,8 +107,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             transform: translateY(-10px);
 
             ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
+                props.isOpen &&
+                css<{ isOpen: boolean }>`
                     transform: rotate(-45deg) translateY(0);
                 `}
         }
@@ -126,8 +123,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             transform: translateY(10px);
 
             ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
+                props.isOpen &&
+                css<{ isOpen: boolean }>`
                     transform: rotate(45deg) translateY(0);
                     width: 36px;
                 `}
@@ -146,8 +143,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     display: none;
 
     ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
             display: flex;
             justify-content: center;
             align-items: center;
@@ -180,4 +177,4 @@ export const S = {
     MobileMenuPopup,
     BurgerButton,
     DesktopMenu,
-}
+};

@@ -16,12 +16,12 @@ export const Blog: React.FC = () => {
                     align={"center"}
                     direction={"column"}
                 >
-                    <StyledICon
+                    {/* <StyledICon
                         iconId={"blogSvg"}
                         width={"60"}
                         height={"60"}
                         viewBox={"0 0 32 32"}
-                    />
+                    /> */}
                     <Text>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit, sed do eiusmod tempor incididunt ut labore et
@@ -38,9 +38,9 @@ const StyledBlog = styled.section`
 
 `;
 
-const StyledICon = styled(Icon)`
-    margin-bottom: 30px;
-`;
+// const StyledICon = styled(Icon)`
+//     margin-bottom: 30px;
+// `;
 
 const Text = styled.p`
     margin-bottom: 20px;
