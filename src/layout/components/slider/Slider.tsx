@@ -55,9 +55,6 @@ export const Slider = () => (
         <AliceCarousel 
         mouseTracking
         // disableButtonsControls
-        renderPrevButton={()=>{
-            return <Icon iconId={"reactSvg"} width="20px" height="20px"/>
-        }}
         items={items} />
     </S.Slider>
 );

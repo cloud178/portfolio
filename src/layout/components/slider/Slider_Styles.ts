@@ -3,13 +3,13 @@ import {Link} from "../Link";
 import {theme} from "../../../styles/Theme";
 
 const Slider = styled.div`
+    position: relative;
     max-width: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    outline: 1px solid red;
 `
 
 const Slide = styled.div`
