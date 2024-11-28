@@ -3,6 +3,7 @@ import profilePicture from '../../../assets/images/photo.webp'
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import { S } from './Main_Styles';
+import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC = () => {
     return (
@@ -18,7 +19,17 @@ export const Main: React.FC = () => {
                     >
                         <S.SmallText>Hi There,</S.SmallText>
                         <S.Name>My name is <span>Denis Biryukov</span></S.Name>
-                        <S.MainTitle>I am a Web developer 😎</S.MainTitle>
+                        <S.MainTitle>
+                            <p>I am a Web developer</p>
+                        <Typewriter
+                            options={{
+                                strings: ['I am a Web developer.'],
+                                autoStart: true,
+                                loop: true,
+                                delay: 45,
+                            }}
+                        />
+                        </S.MainTitle>
                         <S.Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt praesentium, voluptas?
                             Amet
                             aperiam eos facere, illo laborum nulla odio reprehenderit. Lorem ipsum dolor sit amet,

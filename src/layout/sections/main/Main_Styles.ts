@@ -96,6 +96,10 @@ const Name = styled.h2`
 const MainTitle = styled.h1`
     ${font({weight: 700, Fmin: 20, Fmax: 27})};
     margin-bottom: 10px;
+
+    p {
+        display: none;
+    }
 `
 
 const Text = styled.p`
