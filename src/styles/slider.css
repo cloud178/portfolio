@@ -22,33 +22,33 @@
     background-color: #2DCB87;
 }
 
-.alice-carousel__next-btn {
-    position: absolute;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    left: 110%;
-    /*background-color: #fff;*/
-    border-radius: 50%;
-}
+/*.alice-carousel__next-btn {*/
+/*    position: absolute;*/
+/*    display: inline-block;*/
+/*    box-sizing: border-box;*/
+/*    padding: 0;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    left: 110%;*/
+/*    !*background-color: #fff;*!*/
+/*    border-radius: 50%;*/
+/*}*/
 
-.alice-carousel__prev-btn {
-    position: absolute;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    right: 110%;
-    /*background-color: #fff;*/
-    border-radius: 50%;
-}
+/*.alice-carousel__prev-btn {*/
+/*    position: absolute;*/
+/*    display: inline-block;*/
+/*    box-sizing: border-box;*/
+/*    padding: 0;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    right: 110%;*/
+/*    !*background-color: #fff;*!*/
+/*    border-radius: 50%;*/
+/*}*/
 
 .alice-carousel__prev-btn-item,
 .alice-carousel__next-btn-item {
@@ -57,16 +57,16 @@
 
 }
 
-.alice-carousel__next-btn-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+/*.alice-carousel__next-btn-wrapper {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100%;*/
+/*}*/
 
-.alice-carousel__prev-btn-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+/*.alice-carousel__prev-btn-wrapper {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100%;*/
+/*}*/

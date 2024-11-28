@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
 const Contacts = styled.section`
-    
+    //min-height: 85vh;
 `
 
 const Form = styled.form`
