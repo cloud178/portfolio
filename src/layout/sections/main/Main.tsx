@@ -8,7 +8,7 @@ import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
-        <S.Main id='Home'>
+        <S.Main id='home'>
             <Container>
                 <S.StyledFlexWrapper justify="space-between" align={"center"} wrap={"wrap"}
                                    gap={"100px"}
@@ -46,9 +46,8 @@ export const Main: React.FC = () => {
                     tiltMaxAngleY={40}
                     perspective={800}
                     transitionSpeed={1500}
-                    scale={1.15}
-                    gyroscope={true}
-                    >
+                    // scale={1.15}
+                    gyroscope={true}>
                         <S.PhotoWrapper>
                             <S.Photo src={profilePicture} alt="my profile picture"/>
                         </S.PhotoWrapper>

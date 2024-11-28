@@ -7,7 +7,7 @@ import { Container } from "../../components/Container";
 
 export const Blog: React.FC = () => {
     return (
-        <StyledBlog id="Blog">
+        <StyledBlog id="blog">
             <Container>
                 <SectionTitle>Blog</SectionTitle>
                 <FlexWrapper

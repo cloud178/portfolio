@@ -1,34 +1,11 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
+import {Link} from "react-scroll";
 
 // Menu
 
-const Link = styled.a`
-    font-family: Josefin Sans, sans-serif;
-    font-size: 25px;
-    font-weight: 400;
-    text-align: center;
-    color: transparent;
-
-    &::before {
-        content: "";
-        display: inline-block;
-        height: 1px;
-        background-color: ${theme.colors.font.fontSecondary};
-        z-index: 100;
-        position: absolute;
-        top: 50%;
-        left: -10px;
-        right: -10px;
-        transform: scale(0);
-        transition: transform 0.3s ease;
-    }
-
-    &:hover {
-        &::before {
-            transform: scale(1);
-        }
-    }
+const MenuItem = styled.li`
+    position: relative;
 `;
 
 const Mask = styled.span`
@@ -49,10 +26,34 @@ const Mask = styled.span`
     }
 `;
 
-const MenuItem = styled.li`
-    position: relative;
+const NavLink = styled(Link)`
+    font-family: Josefin Sans, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    color: transparent;
 
-    &:hover {
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 1px;
+        background-color: ${theme.colors.font.fontSecondary};
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        right: -10px;
+        transform: scale(0);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover, &.active {
+        &::before {
+            transform: scale(1);
+        }
+    }
+
+    &:hover, &.active {
         transform: scale(1.2);
 
         &:active {
@@ -170,7 +171,7 @@ const DesktopMenu = styled.nav`
 `;
 
 export const S = {
-    Link,
+    NavLink,
     MenuItem,
     Mask,
     MobileMenu,
