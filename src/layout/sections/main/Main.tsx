@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import { S } from './Main_Styles';
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
@@ -39,9 +40,19 @@ export const Main: React.FC = () => {
                             repellendus
                             sequi ut. Alias, quisquam?</S.Text>
                     </FlexWrapper>
-                    <S.PhotoWrapper>
-                        <S.Photo src={profilePicture} alt="my profile picture"/>
-                    </S.PhotoWrapper>
+                    <Tilt
+                    className="parallax-effect-img"
+                    tiltMaxAngleX={40}
+                    tiltMaxAngleY={40}
+                    perspective={800}
+                    transitionSpeed={1500}
+                    scale={1.15}
+                    gyroscope={true}
+                    >
+                        <S.PhotoWrapper>
+                            <S.Photo src={profilePicture} alt="my profile picture"/>
+                        </S.PhotoWrapper>
+                    </Tilt>
                 </S.StyledFlexWrapper>
             </Container>
         </S.Main>
