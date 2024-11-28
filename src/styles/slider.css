@@ -32,7 +32,7 @@
     width: 40px;
     height: 40px;
     left: 110%;
-    background-color: #fff;
+    /*background-color: #fff;*/
     border-radius: 50%;
 }
 
@@ -46,7 +46,7 @@
     width: 40px;
     height: 40px;
     right: 110%;
-    background-color: #fff;
+    /*background-color: #fff;*/
     border-radius: 50%;
 }
 

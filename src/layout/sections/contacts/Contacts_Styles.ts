@@ -21,6 +21,7 @@ const Form = styled.form`
 `
 
 const Field = styled.input`
+    position: relative;
     width: 100%;
     background-color: ${theme.colors.primaryBg};
     border: 1px solid ${theme.colors.borderColor};

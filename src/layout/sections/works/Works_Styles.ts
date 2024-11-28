@@ -14,6 +14,7 @@ const Works = styled.section<StyledWorksPropsType>`
 `;
 
 const Work = styled.div`
+    position: relative;
     background-color: ${theme.colors.primaryBg};
     width: 330px;
     flex-grow: 1;
