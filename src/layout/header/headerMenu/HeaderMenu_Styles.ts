@@ -3,7 +3,6 @@ import { theme } from "../../../styles/Theme";
 import {Link} from "react-scroll";
 
 // Menu
-
 const MenuItem = styled.li`
     position: relative;
 `;
@@ -16,6 +15,7 @@ const Mask = styled.span`
     height: 50%;
     overflow: hidden;
     color: ${theme.colors.font.fontSecondary};
+    transition: ${theme.animations.transition};
 
     & + & {
         top: 50%;
@@ -44,20 +44,13 @@ const NavLink = styled(Link)`
         left: -10px;
         right: -10px;
         transform: scale(0);
-        transition: transform 0.3s ease;
+        transition: ${theme.animations.transition};
     }
 
     &:hover, &.active {
+        
         &::before {
             transform: scale(1);
-        }
-    }
-
-    &:hover, &.active {
-        transform: scale(1.2);
-
-        &:active {
-            transform: scale(1.2) translateY(2px);
         }
 
         ${Mask} {
@@ -141,23 +134,31 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     bottom: 0;
     z-index: 900;
     background-color: rgba(31, 31, 32, 0.9);
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 0.5s ease-out;
 
-    ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        `}
 
     ul {
         display: flex;
-        gap: 35px;
+        gap: 10px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transition: 0.5s ease-out;
     }
+
+    ${(props) =>
+            props.isOpen &&
+            css<{ isOpen: boolean }>`
+                transform: translateY(0);
+                
+                & ul {
+                    gap: 70px;
+                }
+            `}
 `;
 
 // Desktop Menu

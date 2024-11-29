@@ -27,7 +27,8 @@ export const Link = styled.a<{active?: boolean}>`
         width: calc(100% + 4px);
         left: -2px;
         z-index: -100;
-        
+        height: 0px;    
+        transition: ${theme.animations.transition};    
         //left: -2px;
         //right: -2px;
         

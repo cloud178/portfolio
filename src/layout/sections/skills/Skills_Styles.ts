@@ -17,17 +17,17 @@ const Skill = styled.div`
 
 const IconContainer = styled.div`
 
-    @media (pointer: fine) {
-        filter: grayscale(1);
-
-        transition: transform 0.3s ease;
-        transform-origin: center;
-
-        &:hover {
-            transform: scale(1.2);
-            filter: grayscale(0);
-        }
-    }
+    //@media (pointer: fine) {
+    //    filter: grayscale(1);
+    //
+    //    transition: transform 0.3s ease;
+    //    transform-origin: center;
+    //
+    //    &:hover {
+    //        transform: scale(1.2);
+    //        filter: grayscale(0);
+    //    }
+    //}
 `
 
 const SkillTitle = styled.h3`
