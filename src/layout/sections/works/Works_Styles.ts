@@ -16,8 +16,6 @@ const Works = styled.section<StyledWorksPropsType>`
 const Work = styled.div`
     position: relative;
     background-color: ${theme.colors.primaryBg};
-    width: 330px;
-    flex-grow: 1;
 
     ${Link} {
         padding: 10px 0;
@@ -32,10 +30,6 @@ const Work = styled.div`
                 }
             }
         }
-    }
-
-    @media ${theme.media.desktop} {
-        max-width: 500px;
     }
 `
 

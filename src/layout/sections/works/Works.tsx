@@ -8,6 +8,8 @@ import TimerImg from "../../../assets/images/proj2 (1).webp";
 import {Container} from "../../components/Container";
 import {S} from "./Works_Styles";
 import {Fade} from "react-awesome-reveal";
+import {motion} from "motion/react"
+import {AnimatePresence} from "motion/react"
 
 const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
     {
@@ -30,14 +32,44 @@ const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
 
 const worksData = [
     {
+        id: 1,
         src: SocialNetworkImg,
         title: "Social Network",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         type: "spa",
     },
     {
+        id: 2,
         src: TimerImg,
         title: "Timer",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        type: "react",
+    },
+    {
+        id: 3,
+        src: SocialNetworkImg,
+        title: "Social Network2",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        type: "landing",
+    },
+    {
+        id: 4,
+        src: TimerImg,
+        title: "Timer2",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        type: "react",
+    },
+    {
+        id: 5,
+        src: SocialNetworkImg,
+        title: "Social Network3",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        type: "spa",
+    },
+    {
+        id: 6,
+        src: TimerImg,
+        title: "Timer3",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         type: "react",
     },
@@ -70,13 +102,26 @@ export const Works: React.FC = () => {
                          currentFilterStatus={currentFilterStatus}/>
                 <Fade delay={200}>
                     <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
-                        {filteredWorks.map((w, index) => {
-                            return <Work
-                                src={w.src} key={index}
-                                title={w.title}
-                                text={w.text}
-                            />
-                        })}
+                        <AnimatePresence>
+                            {filteredWorks.map((w) => {
+                                return (
+                                    <motion.div style={{width: "400px", flexGrow: 1, maxWidth: "500px"}}
+                                        key={w.id}
+                                        layout={true}
+                                        initial={{ x: 300, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        exit={{ x: -300, opacity: 0 }}
+                                    >
+                                        <Work
+                                            key={w.id}
+                                            src={w.src}
+                                            title={w.title}
+                                            text={w.text}
+                                        />
+                                    </motion.div>
+                                )
+                            })}
+                        </AnimatePresence>
                     </FlexWrapper>
                 </Fade>
             </Container>
