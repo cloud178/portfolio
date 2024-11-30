@@ -7,8 +7,9 @@ import SocialNetworkImg from "../../../assets/images/proj1 (1).webp";
 import TimerImg from "../../../assets/images/proj2 (1).webp";
 import {Container} from "../../components/Container";
 import {S} from "./Works_Styles";
+import {Fade} from "react-awesome-reveal";
 
-    const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
+const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
     {
         title: "All",
         status: "all",
@@ -67,16 +68,17 @@ export const Works: React.FC = () => {
                 <TabMenu tabsItems={tabsItems}
                          changeFilterStatus={changeFilterStatus}
                          currentFilterStatus={currentFilterStatus}/>
-                <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
-
-                    {filteredWorks.map((w, index) => {
-                        return <Work
-                            src={w.src} key={index}
-                            title={w.title}
-                            text={w.text}
-                        />
-                    })}
-                </FlexWrapper>
+                <Fade delay={200}>
+                    <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
+                        {filteredWorks.map((w, index) => {
+                            return <Work
+                                src={w.src} key={index}
+                                title={w.title}
+                                text={w.text}
+                            />
+                        })}
+                    </FlexWrapper>
+                </Fade>
             </Container>
         </S.Works>
     );

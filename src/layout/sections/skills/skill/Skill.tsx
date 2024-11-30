@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon} from "../../../components/icon/Icon";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import { S } from '../Skills_Styles';
+import {S} from '../Skills_Styles';
 
 type SkillPropsType = {
     iconId: string;
