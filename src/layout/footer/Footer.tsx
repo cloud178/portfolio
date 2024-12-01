@@ -25,13 +25,6 @@ const SocialItemData = [
         height: "20",
         viewBox: "1 1 23 23",
     },
-    {
-        href: "",
-        iconId: "mailSvg",
-        width: "20",
-        height: "20",
-        viewBox: "1 1 22 22",
-    },
 ];
 
 export const Footer: React.FC = () => {
