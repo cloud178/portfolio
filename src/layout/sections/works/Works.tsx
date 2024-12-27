@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import SocialNetworkImg from "../../../assets/images/proj1 (1).webp";
 import TimerImg from "../../../assets/images/proj2 (1).webp";
+import CounterImg from "../../../assets/images/counter.webp";
 import {Container} from "../../components/Container";
 import {S} from "./Works_Styles";
 import {Fade} from "react-awesome-reveal";
@@ -39,10 +40,11 @@ const worksData = [
         type: "spa",
     },
     {
+        // TODO: add link to github and gh page for this project
         id: 2,
-        src: TimerImg,
-        title: "Timer",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        src: CounterImg,
+        title: "Counter",
+        text: "The Counter project is a simple React application with added functionality to enhance user interaction. Here's what it offers: Increment Button: Clicking the Increment button increases the counter value by 1, up to a maximum of 5. Once the counter reaches 5, the button is disabled, and the counter value changes color to indicate the limit has been reached. Reset Button: Clicking the Reset button resets the counter value to 0. This button is disabled when the counter is already at 0. This project showcases state management in React, with added logic for conditional styling and button states.",
         type: "react",
     },
     {
@@ -106,11 +108,11 @@ export const Works: React.FC = () => {
                             {filteredWorks.map((w) => {
                                 return (
                                     <motion.div style={{width: "400px", flexGrow: 1, maxWidth: "500px"}}
-                                        key={w.id}
-                                        layout={true}
-                                        initial={{ x: 300, opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        exit={{ x: -300, opacity: 0 }}
+                                                key={w.id}
+                                                layout={true}
+                                                initial={{x: 300, opacity: 0}}
+                                                animate={{x: 0, opacity: 1}}
+                                                exit={{x: -300, opacity: 0}}
                                     >
                                         <Work
                                             key={w.id}
